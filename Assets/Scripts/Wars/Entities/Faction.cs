@@ -14,5 +14,11 @@ namespace Wars.Entities
     {
         [SerializeField]
         private LimitInt food = new(100, 9999);
+
+        public LimitInt Food
+        {
+            get => food;
+            set => food = value;
+        }
     }
 }

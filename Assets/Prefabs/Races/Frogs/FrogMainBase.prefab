@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8324365
       objectReference: {fileID: 0}
+    - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: creatureSpawns.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: creatureSpawns.Array.data[0]
+      value: 
+      objectReference: {fileID: 4553429275521310876, guid: 60a419f3783beab4690040ca77cc57cd, type: 3}
     - target: {fileID: 8668962850337864709, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Name
       value: FrogMainBase
