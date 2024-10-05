@@ -13,6 +13,11 @@ namespace Scenes.Games
         public override async UniTask LoadData(Game data)
         {
             await base.LoadData(data);
+            if (mapView == null)
+            {
+                // todo load map
+            }
+            
         }
 
         public override async UniTask UnloadData()
