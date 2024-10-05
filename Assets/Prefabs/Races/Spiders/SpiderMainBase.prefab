@@ -54,15 +54,15 @@ PrefabInstance:
       objectReference: {fileID: -142144729, guid: 0aafcd0ab148c8348beb467cae80bfb0, type: 3}
     - target: {fileID: 1030400262622027852, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Color.b
-      value: 0.6320754
+      value: 0.8490566
       objectReference: {fileID: 0}
     - target: {fileID: 1030400262622027852, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Color.g
-      value: 0.16398184
+      value: 0.28435388
       objectReference: {fileID: 0}
     - target: {fileID: 1030400262622027852, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Color.r
-      value: 0.5233894
+      value: 0.8420857
       objectReference: {fileID: 0}
     - target: {fileID: 8668962850337864709, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Name

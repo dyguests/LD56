@@ -5,6 +5,7 @@ using Scenes.Games.Entities;
 using Scenes.Games.Views;
 using UnityEngine;
 using Wars.Entities;
+using Wars.Views;
 
 namespace Scenes.Games
 {
@@ -20,9 +21,11 @@ namespace Scenes.Games
                 // todo load map
             }
 
-            factions = new List<Faction>();
-            factions.Add(new Faction());
-            factions.Add(new Faction());
+            factions = new List<Faction>
+            {
+                new Faction(),
+                new Faction(),
+            };
 
             await mapView.InitFaction(factions[0]);
             await mapView.InitFaction(factions[1]);
@@ -41,6 +44,11 @@ namespace Scenes.Games
         private MapView mapView;
 
         private List<Faction> factions;
+
+        [Space]
+        [Header("测试用，地图自带种族")]
+        [SerializeField] private MainBaseView mainBaseView1;
+        [SerializeField] private MainBaseView mainBaseView2;
 
         #endregion
     }
