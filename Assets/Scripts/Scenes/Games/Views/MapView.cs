@@ -29,7 +29,6 @@ namespace Scenes.Games.Views
         [SerializeField]
         private GroundView groundView;
 
-
         [Space]
         [Header("Custom")]
         [Space]
