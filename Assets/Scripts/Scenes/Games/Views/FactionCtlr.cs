@@ -4,6 +4,7 @@ using Koyou.Commons;
 using Scenes.Games.Entities;
 using UnityEngine;
 using Wars.ScriptableObjects;
+using Wars.Views;
 
 namespace Scenes.Games.Views
 {
@@ -36,5 +37,21 @@ namespace Scenes.Games.Views
                     throw new ArgumentOutOfRangeException();
             }
         }
+
+        #region GenerateMainBaseView
+
+        /// <summary>
+        /// 这个实例中，此方法仅去被调用一次
+        /// </summary>
+        /// <param name="spawnPoint"></param>
+        /// <returns></returns>
+        public MainBaseView GenerateMainBaseView(SpawnPoint spawnPoint)
+        {
+            var instance = Instantiate(RaceSo.mainBaseViewPfb, spawnPoint.transform.position, Quaternion.identity);
+            spawnPoint.MainBaseView = instance;
+            return instance;
+        }
+
+        #endregion
     }
 }

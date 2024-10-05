@@ -5,8 +5,6 @@ using Koyou.Frameworks;
 using Scenes.Games.Entities;
 using Scenes.Games.Views;
 using UnityEngine;
-using Wars.ScriptableObjects;
-using Wars.Views;
 
 namespace Scenes.Games
 {
@@ -65,13 +63,6 @@ namespace Scenes.Games
 
         [Space] [SerializeField]
         private List<FactionCtlr> factionCtlrs;
-
-        [Space] [Space] [Header("测试用，地图自带种族")] [SerializeField]
-        private RaceSo raceSo1;
-        [SerializeField] private MainBaseView mainBaseView1;
-        [Space] [SerializeField]
-        private RaceSo raceSo2;
-        [SerializeField] private MainBaseView mainBaseView2;
 
         #endregion
     }

@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Linq;
+using Cysharp.Threading.Tasks;
 using Koyou.Commons;
 using UnityEngine;
 
@@ -35,7 +36,13 @@ namespace Scenes.Games.Views
 
         public async UniTask InitFaction(FactionCtlr factionCtlr)
         {
-            // Log.N($"Called");
+            var spawnPoint = spawnPoints.Where(point => point.MainBaseView == null).Random();
+            if (spawnPoint == null)
+            {
+                Log.E($"SpawnPoint不足，无法初始化势力{factionCtlr.name}");
+                return;
+            }
+            factionCtlr.GenerateMainBaseView(spawnPoint);
         }
 
         #endregion
