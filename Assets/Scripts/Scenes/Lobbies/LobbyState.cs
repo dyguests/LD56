@@ -2,7 +2,6 @@
 using Cysharp.Threading.Tasks;
 using Koyou.Frameworks;
 using UnityEngine.SceneManagement;
-using Object = UnityEngine.Object;
 
 namespace Scenes.Lobbies
 {
@@ -14,13 +13,13 @@ namespace Scenes.Lobbies
         {
             await base.Enter();
             await SceneManager.LoadSceneAsync("Lobby").ToUniTask();
-            var scene = Object.FindFirstObjectByType<LobbyScene>() ?? throw new Exception($"{nameof(LobbyScene)} not found");
+            var scene = UnityEngine.Object.FindFirstObjectByType<LobbyScene>() ?? throw new Exception($"{nameof(LobbyScene)} not found");
             await scene.Enter();
         }
 
         public override async UniTask Exit()
         {
-            var scene = Object.FindFirstObjectByType<LobbyScene>() ?? throw new Exception($"{nameof(LobbyScene)} not found");
+            var scene =UnityEngine. Object.FindFirstObjectByType<LobbyScene>() ?? throw new Exception($"{nameof(LobbyScene)} not found");
             await scene.Exit();
             await base.Exit();
         }
