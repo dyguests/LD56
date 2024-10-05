@@ -15,6 +15,10 @@ namespace Scenes.Games.Views
         [SerializeField] private RaceSo raceSo;
         public RaceSo RaceSo => raceSo;
 
+        [Header("主基地")] [SerializeField]
+        private MainBaseView mainBaseView;
+        public MainBaseView MainBaseView => mainBaseView;
+
         protected virtual async UniTask LoadData(int factionIndex, FactionBase factionBase, Transform parent)
         {
             name = $"{factionBase.ctlrType}Ctlr{factionIndex}";
@@ -48,6 +52,7 @@ namespace Scenes.Games.Views
         public MainBaseView GenerateMainBaseView(SpawnPoint spawnPoint)
         {
             var instance = Instantiate(RaceSo.mainBaseViewPfb, spawnPoint.transform.position, Quaternion.identity);
+            mainBaseView = instance;
             spawnPoint.MainBaseView = instance;
             return instance;
         }

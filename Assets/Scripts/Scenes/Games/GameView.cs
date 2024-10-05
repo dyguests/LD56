@@ -20,6 +20,8 @@ namespace Scenes.Games
                 // todo load map
             }
 
+            PlayerCtlr playerCtlr = null;
+
             factionCtlrs.Clear();
             for (var i = 0; i < Data.factionBases.Count; i++)
             {
@@ -30,6 +32,7 @@ namespace Scenes.Games
                     case FactionBase.CtlrType.Player:
                     {
                         var factionCtlr = await PlayerCtlr.Generate(i, factionBase, transform);
+                        playerCtlr = factionCtlr;
                         uiView.BindPlayer(factionCtlr);
                         factionCtlrs.Add(factionCtlr);
                         break;
@@ -47,6 +50,8 @@ namespace Scenes.Games
             {
                 await mapView.InitFaction(factionCtlr);
             }
+
+            cameramanView.BindPlayer(playerCtlr);
         }
 
         public override async UniTask UnloadData()
@@ -59,6 +64,7 @@ namespace Scenes.Games
         #region GameView
 
         [SerializeField] private GameUiView uiView;
+        [SerializeField] private CameramanView cameramanView;
         [SerializeField] private MapView mapView;
 
         [Space] [SerializeField]
