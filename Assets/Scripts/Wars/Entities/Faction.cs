@@ -12,13 +12,20 @@ namespace Wars.Entities
     [Serializable]
     public class Faction
     {
-        [SerializeField]
-        private LimitInt food = new(100, 9999);
+        [SerializeField] private LimitInt food = new(100, 9999);
 
         public LimitInt Food
         {
             get => food;
             set => food = value;
+        }
+
+        [SerializeField] private LimitInt population = new(0, 999);
+
+        public LimitInt Population
+        {
+            get => population;
+            set => population = value;
         }
     }
 }
