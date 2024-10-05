@@ -10,5 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a3ac25e5a5b4bf3a6f5d0d5c056b075, type: 3}
-  m_Name: FrogRace
+  m_Name: SpiderRaceSo
   m_EditorClassIdentifier: 
+  mainBaseViewPfb: {fileID: 5097628530346415068, guid: 9c3c8ee057f9a094685c24d633e51f42, type: 3}
