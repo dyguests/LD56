@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+using Wars.Entities;
 
 namespace Scenes.Games.Views
 {
@@ -35,6 +38,11 @@ namespace Scenes.Games.Views
         [SerializeField]
         private Vector2 mapSize = new(100, 100);
         [SerializeField] private SpawnPoint[] spawnPoints;
+
+        public async UniTask InitFaction(Faction faction)
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
     }

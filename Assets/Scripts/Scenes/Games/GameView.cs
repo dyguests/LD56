@@ -1,8 +1,10 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Koyou.Frameworks;
 using Scenes.Games.Entities;
 using Scenes.Games.Views;
 using UnityEngine;
+using Wars.Entities;
 
 namespace Scenes.Games
 {
@@ -17,7 +19,13 @@ namespace Scenes.Games
             {
                 // todo load map
             }
-            
+
+            factions = new List<Faction>();
+            factions.Add(new Faction());
+            factions.Add(new Faction());
+
+            await mapView.InitFaction(factions[0]);
+            await mapView.InitFaction(factions[1]);
         }
 
         public override async UniTask UnloadData()
@@ -31,6 +39,8 @@ namespace Scenes.Games
 
         [SerializeField]
         private MapView mapView;
+
+        private List<Faction> factions;
 
         #endregion
     }
