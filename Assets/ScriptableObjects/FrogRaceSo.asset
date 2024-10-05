@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3ac25e5a5b4bf3a6f5d0d5c056b075, type: 3}
   m_Name: FrogRaceSo
   m_EditorClassIdentifier: 
-  mainBaseViewPfb: {fileID: 5097628530346415068, guid: a4fb62cb791f51748aa82b52f168137e, type: 3}
+  mainBaseViewPfb: {fileID: 0}

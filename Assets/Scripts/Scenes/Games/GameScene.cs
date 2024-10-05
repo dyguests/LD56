@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Koyou.Frameworks;
 using Scenes.Games.Entities;
 using UnityEngine;
@@ -28,7 +29,23 @@ namespace Scenes.Games
         public override async UniTask Enter()
         {
             await base.Enter();
-            await gameView.LoadData(new Game());
+            await gameView.LoadData(new Game
+            {
+                map = MapName,
+                factionBases = new List<FactionBase>()
+                {
+                    new()
+                    {
+                        ctlrType = FactionBase.CtlrType.Player,
+                        raceType = FactionBase.RaceType.Frog,
+                    },
+                    new()
+                    {
+                        ctlrType = FactionBase.CtlrType.Ai,
+                        raceType = FactionBase.RaceType.Spider,
+                    },
+                },
+            });
         }
 
         public override async UniTask Exit()
@@ -41,8 +58,7 @@ namespace Scenes.Games
 
         #region GameScene
 
-        [SerializeField]
-        private GameView gameView;
+        [SerializeField] private GameView gameView;
 
         public string MapName { get; set; }
         public string RaceName { get; set; }
