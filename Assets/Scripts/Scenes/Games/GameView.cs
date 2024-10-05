@@ -45,8 +45,10 @@ namespace Scenes.Games
                 }
             }
 
-            // await mapView.InitFaction(factions[0]);
-            // await mapView.InitFaction(factions[1]);
+            foreach (var factionCtlr in factionCtlrs)
+            {
+                await mapView.InitFaction(factionCtlr);
+            }
         }
 
         public override async UniTask UnloadData()

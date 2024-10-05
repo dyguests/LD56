@@ -1,7 +1,6 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Koyou.Commons;
 using UnityEngine;
-using Wars.Entities;
 
 namespace Scenes.Games.Views
 {
@@ -27,21 +26,16 @@ namespace Scenes.Games.Views
 
         #region MapView
 
-        [SerializeField]
-        private BoundariesView boundariesView;
-        [SerializeField]
-        private GroundView groundView;
+        [SerializeField] private BoundariesView boundariesView;
+        [SerializeField] private GroundView groundView;
 
-        [Space]
-        [Header("Custom")]
-        [Space]
-        [SerializeField]
+        [Space] [Header("Custom")] [Space] [SerializeField]
         private Vector2 mapSize = new(100, 100);
         [SerializeField] private SpawnPoint[] spawnPoints;
 
-        public async UniTask InitFaction(Faction faction)
+        public async UniTask InitFaction(FactionCtlr faction)
         {
-            throw new NotImplementedException();
+            Log.N($"Called");
         }
 
         #endregion
