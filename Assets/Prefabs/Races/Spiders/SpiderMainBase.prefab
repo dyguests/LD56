@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 383377113148182733, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.798
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 383377113148182733, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.506
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 383377113148182733, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64,6 +64,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8420857
       objectReference: {fileID: 0}
+    - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: creatureSpawns.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: creatureSpawns.Array.data[0]
+      value: 
+      objectReference: {fileID: 8688891056487239019, guid: 47e86a5459fb211499efe68ac528cb5f, type: 3}
     - target: {fileID: 8668962850337864709, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Name
       value: SpiderMainBase

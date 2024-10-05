@@ -7,5 +7,7 @@ namespace Wars.Views
         [Space]
         [SerializeField]
         private CreatureView[] creatureSpawns;
+
+        public CreatureView[] CreatureSpawns => creatureSpawns;
     }
 }
