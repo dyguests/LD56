@@ -11,7 +11,7 @@ namespace Scenes.Games.Views
 
         public static async Task<AiCtlr> Generate(int factionIndex, FactionBase factionBase, Transform parent)
         {
-            sPrefab ??= await ResourceEx.LoadAsync<AiCtlr>("Factions/AiCtlr");
+            sPrefab ??= await Resources.LoadAsync<AiCtlr>("Factions/AiCtlr").ToUniTask<AiCtlr>();
             var instance = Instantiate(sPrefab, parent);
             instance.LoadData(factionIndex, factionBase, parent);
             return instance;
