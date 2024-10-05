@@ -14,7 +14,7 @@ namespace Scenes.Games.Views
         public void SetBoundary(Rect rect)
         {
             transform.localPosition = rect.center;
-            cd.offset = Vector2.zero;
+            // cd.offset = Vector2.zero;
             cd.size = rect.size;
         }
     }
