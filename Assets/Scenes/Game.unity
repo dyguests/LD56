@@ -264,7 +264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapView: {fileID: 700480161}
+  raceSo1: {fileID: 11400000, guid: 5b89bef3f97a2104ebff4541b48a31f8, type: 2}
   mainBaseView1: {fileID: 946668214}
+  raceSo2: {fileID: 11400000, guid: 9ad7f37099f86ca4c8a0a3c907ccd851, type: 2}
   mainBaseView2: {fileID: 396845107}
 --- !u!1001 &319260745
 PrefabInstance:
