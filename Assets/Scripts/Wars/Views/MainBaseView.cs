@@ -1,4 +1,7 @@
 ﻿namespace Wars.Views
 {
-    public class MainBaseView : BuildingView { }
+    public class MainBaseView : BuildingView
+    {
+        
+    }
 }
