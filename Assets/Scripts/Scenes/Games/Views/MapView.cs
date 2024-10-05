@@ -33,9 +33,9 @@ namespace Scenes.Games.Views
         private Vector2 mapSize = new(100, 100);
         [SerializeField] private SpawnPoint[] spawnPoints;
 
-        public async UniTask InitFaction(FactionCtlr faction)
+        public async UniTask InitFaction(FactionCtlr factionCtlr)
         {
-            Log.N($"Called");
+            // Log.N($"Called");
         }
 
         #endregion

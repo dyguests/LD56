@@ -13,14 +13,8 @@ namespace Scenes.Games.Views
         {
             sPrefab ??= await Resources.LoadAsync<PlayerCtlr>("Factions/PlayerCtlr").ToUniTask<PlayerCtlr>();
             var instance = Instantiate(sPrefab, parent);
-            instance.LoadData(factionIndex, factionBase, parent);
+            await instance.LoadData(factionIndex, factionBase, parent);
             return instance;
-        }
-
-        private void LoadData(int factionIndex, FactionBase factionBase, Transform parent)
-        {
-            name = $"PlayerCtlr{factionIndex}";
-            transform.localPosition = new Vector3(1 + factionIndex * 2, 0, 0);
         }
     }
 }
