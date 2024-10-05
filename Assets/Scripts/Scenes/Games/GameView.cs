@@ -41,17 +41,16 @@ namespace Scenes.Games
 
         #region GameView
 
-        [SerializeField]
-        private MapView mapView;
+        [SerializeField] private GameUiView uiView;
+        [SerializeField] private MapView mapView;
 
         private List<Faction> factions;
 
-        [Space] [Space]
-        [Header("测试用，地图自带种族")]
-        [SerializeField] private RaceSo raceSo1;
+        [Space] [Space] [Header("测试用，地图自带种族")] [SerializeField]
+        private RaceSo raceSo1;
         [SerializeField] private MainBaseView mainBaseView1;
-        [Space]
-        [SerializeField] private RaceSo raceSo2;
+        [Space] [SerializeField]
+        private RaceSo raceSo2;
         [SerializeField] private MainBaseView mainBaseView2;
 
         #endregion
