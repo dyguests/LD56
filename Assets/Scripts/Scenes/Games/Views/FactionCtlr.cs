@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Koyou.Commons;
 using Scenes.Games.Entities;
 using UnityEngine;
+using Wars.Entities;
 using Wars.ScriptableObjects;
 using Wars.Views;
 
@@ -11,6 +12,9 @@ namespace Scenes.Games.Views
     public abstract class FactionCtlr : MonoBehaviour
     {
         protected FactionBase factionBase;
+
+        protected Faction faction;
+        public Faction Faction => faction;
 
         [SerializeField] private RaceSo raceSo;
         public RaceSo RaceSo => raceSo;
@@ -24,6 +28,7 @@ namespace Scenes.Games.Views
             name = $"{factionBase.ctlrType}Ctlr{factionIndex}";
             transform.localPosition = new Vector3(1 + factionIndex * 2, 0, 0);
             this.factionBase = factionBase;
+            faction = new Faction();
 
             switch (factionBase.raceType)
             {
