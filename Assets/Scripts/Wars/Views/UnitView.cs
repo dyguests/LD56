@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Wars.Entities;
 
 namespace Wars.Views
 {
@@ -7,6 +8,8 @@ namespace Wars.Views
         #region UnitView
 
         [SerializeField] protected CircleCollider2D cd;
+
+        public Unit Unit { get; set; }
 
         #endregion
     }
