@@ -36,7 +36,8 @@ namespace Scenes.Games.Views
 
         public async UniTask InitFaction(FactionCtlr factionCtlr)
         {
-            var spawnPoint = spawnPoints.Where(point => point.MainbaseView == null).Random();
+            // var spawnPoint = spawnPoints.Where(point => point.MainbaseView == null).Random();
+            var spawnPoint = spawnPoints.First(point => point.MainbaseView == null);
             if (spawnPoint == null)
             {
                 Log.E($"SpawnPoint不足，无法初始化势力{factionCtlr.name}");

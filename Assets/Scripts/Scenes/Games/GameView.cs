@@ -22,6 +22,7 @@ namespace Scenes.Games
             }
 
             PlayerCtlr playerCtlr = null;
+            AiCtlr aiCtlr = null;
 
             factionCtlrs.Clear();
             for (var i = 0; i < Data.factionBases.Count; i++)
@@ -32,16 +33,13 @@ namespace Scenes.Games
                 {
                     case FactionBase.CtlrType.Player:
                     {
-                        var factionCtlr = await PlayerCtlr.Generate(i, factionBase, transform);
-                        playerCtlr = factionCtlr;
-                        uiView.BindPlayer(factionCtlr);
-                        factionCtlrs.Add(factionCtlr);
+                        playerCtlr = await PlayerCtlr.Generate(i, factionBase, transform);
+                        factionCtlrs.Add(playerCtlr);
                         break;
                     }
                     case FactionBase.CtlrType.Ai:
                     {
-                        var aiCtlr = await AiCtlr.Generate(i, factionBase, transform);
-                        uiView.BindAi(aiCtlr);
+                        aiCtlr = await AiCtlr.Generate(i, factionBase, transform);
                         factionCtlrs.Add(aiCtlr);
                         break;
                     }
@@ -60,6 +58,9 @@ namespace Scenes.Games
             {
                 await mapView.InitFaction(factionCtlr);
             }
+
+            uiView.BindPlayer(playerCtlr);
+            uiView.BindAi(aiCtlr);
 
             // cameramanView.BindPlayer(playerCtlr);
         }

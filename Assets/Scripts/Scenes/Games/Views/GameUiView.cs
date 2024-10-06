@@ -1,15 +1,25 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Scenes.Games.Views
 {
     public class GameUiView : MonoBehaviour
     {
+        private void Start()
+        {
+            restartBtn.onClick.AddListener(() => { SceneManager.LoadScene("Game"); });
+        }
+
         #region GameUiView
 
         [SerializeField] private ResourcesPanelView resourcesPanelView;
+        
+        [SerializeField] private GameObject winPanel;
         [SerializeField] private TMP_Text winText;
+        [SerializeField] private Button restartBtn;
 
         private PlayerCtlr _playerCtlr;
 
@@ -24,11 +34,13 @@ namespace Scenes.Games.Views
 
             _playerHealthDisposable = playerCtlr.MainbaseView.Data.Health.Collect((previous, current, transition) =>
             {
+                if (current.current > 0) return;
+
                 _playerHealthDisposable.Dispose();
                 _aiHealthDisposable.Dispose();
 
                 winText.text = "You Lose!";
-                winText.gameObject.SetActive(true);
+                winPanel.gameObject.SetActive(true);
             });
         }
 
@@ -43,11 +55,13 @@ namespace Scenes.Games.Views
         {
             _aiHealthDisposable = aiCtlr.MainbaseView.Data.Health.Collect((previous, current, transition) =>
             {
+                if (current.current > 0) return;
+
                 _playerHealthDisposable.Dispose();
                 _aiHealthDisposable.Dispose();
 
                 winText.text = "You Win!";
-                winText.gameObject.SetActive(true);
+                winPanel.gameObject.SetActive(true);
             });
         }
 
