@@ -7,6 +7,5 @@ namespace Wars.ScriptableObjects
     public class RaceSo : ScriptableObject
     {
         public MainbaseSo mainbaseSo;
-        public MainbaseView prefab;
     }
 }

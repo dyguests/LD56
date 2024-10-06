@@ -40,7 +40,9 @@ namespace Scenes.Games
                     }
                     case FactionBase.CtlrType.Ai:
                     {
-                        factionCtlrs.Add(await AiCtlr.Generate(i, factionBase, transform));
+                        var aiCtlr = await AiCtlr.Generate(i, factionBase, transform);
+                        uiView.BindAi(aiCtlr);
+                        factionCtlrs.Add(aiCtlr);
                         break;
                     }
                     default: throw new ArgumentOutOfRangeException();
@@ -65,6 +67,7 @@ namespace Scenes.Games
         public override async UniTask UnloadData()
         {
             uiView.UnbindPlayer();
+            uiView.UnbindAi();
 
             await base.UnloadData();
         }

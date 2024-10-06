@@ -57,11 +57,16 @@ namespace Scenes.Games.Views
         /// <returns></returns>
         public MainbaseView GenerateMainBaseView(SpawnPoint spawnPoint)
         {
-            var instance = RaceSo.prefab.Duplicate(faction, spawnPoint.transform.position, true);
+            var mainbaseSo = RaceSo.mainbaseSo;
+
+            var mainbase = Mainbase.CreateFrom(mainbaseSo.mainbaseBase);
+
+            var instance = mainbaseSo.prefab.Duplicate(faction, spawnPoint.transform.position, true);
             spawnPoint.MainbaseView = mainbaseView = instance;
 
             instance.FactionCtlr = this;
             instance.Opponent = Opponent;
+            instance.LoadData(mainbase).Forget();
 
             return instance;
         }

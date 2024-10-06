@@ -2,6 +2,11 @@
 {
     public class Mainbase : Building
     {
-        public Mainbase(MainbaseBase mainbaseBase) : base(mainbaseBase) { }
+        public static Mainbase CreateFrom(MainbaseBase mainbaseBase)
+        {
+            return new Mainbase(mainbaseBase);
+        }
+
+        private Mainbase(MainbaseBase mainbaseBase) : base(mainbaseBase) { }
     }
 }

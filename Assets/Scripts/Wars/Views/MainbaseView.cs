@@ -19,14 +19,12 @@ namespace Wars.Views
 
         #endregion
 
-        [SerializeField] private List<SpawnIntent> spawnIntents;
+        #region DataView<TData>
 
-        private Heartbeat _heartbeat;
-
-        private Faction faction;
-
-        private async UniTask LoadData()
+        public override async UniTask LoadData(Mainbase data)
         {
+            await base.LoadData(data);
+
             spawnIntents.Add(new SpawnIntent(CreatureSos[0]));
 
             _heartbeat = Heartbeat.Run(async () =>
@@ -57,10 +55,20 @@ namespace Wars.Views
             });
         }
 
-        private async UniTask UnloadData()
+        public override async UniTask UnloadData()
         {
             _heartbeat.Stop();
+
+            await base.UnloadData();
         }
+
+        #endregion
+
+        [SerializeField] private List<SpawnIntent> spawnIntents;
+
+        private Heartbeat _heartbeat;
+
+        private Faction faction;
 
         #region MainBaseView
 
@@ -73,7 +81,6 @@ namespace Wars.Views
             instance.name = $"{name}{GenerateId()}";
             instance.faction = faction;
             // todo if not init, then cost food.
-            instance.LoadData().Forget();
 
             return instance;
         }
