@@ -67,7 +67,7 @@ PrefabInstance:
     - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: creatureSpawns.Array.data[0]
       value: 
-      objectReference: {fileID: 4553429275521310876, guid: 60a419f3783beab4690040ca77cc57cd, type: 3}
+      objectReference: {fileID: 5011982991541535968, guid: 44d89c8de10aa674f8ad0d932dba1cb7, type: 3}
     - target: {fileID: 8668962850337864709, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Name
       value: FrogMainBase

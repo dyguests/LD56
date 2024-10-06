@@ -31,7 +31,11 @@ namespace Wars.Views
         {
             _heartbeat = Heartbeat.Run(async () =>
             {
-                var creatureView = Instantiate(CreatureSpawns[0], transform.position, Quaternion.identity);
+                var creatureView = Instantiate(
+                    CreatureSpawns[0],
+                    transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized),
+                    Quaternion.identity
+                );
                 // creatureView.name= "Creature";
                 await UniTask.Delay(5000);
             });
