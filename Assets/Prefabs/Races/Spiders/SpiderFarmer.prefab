@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -142144729, guid: 0aafcd0ab148c8348beb467cae80bfb0, type: 3}
+    - target: {fileID: 5985875745467502396, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+      propertyPath: m_Mass
+      value: 0.03141593
+      objectReference: {fileID: 0}
     - target: {fileID: 6654102401751474997, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
       propertyPath: m_Name
       value: SpiderFarmer
@@ -67,6 +71,10 @@ PrefabInstance:
     - target: {fileID: 8062758860537867237, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
       propertyPath: m_Radius
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606804165041774354, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.446
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -95,11 +103,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     costFood: 5
+    costPopulation: 0
     costTime: 5
+    health: 0
+    attack: 0
+    speed: 0
   cd: {fileID: 7618270317098972808}
-  farmer:
-    costFood: 25
-    costTime: 5
 --- !u!58 &7618270317098972808 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 8062758860537867237, guid: b97c90667fae256469fc7175b89bbd02, type: 3}

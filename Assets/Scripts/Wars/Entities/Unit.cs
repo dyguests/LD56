@@ -1,4 +1,5 @@
 ﻿using System;
+using Koyou.Reactives;
 using UnityEngine;
 
 namespace Wars.Entities
@@ -33,11 +34,26 @@ namespace Wars.Entities
             set => costTime = value;
         }
 
+        [SerializeField] private int health;
+        private Reactive<int> _healthReactive;
+        public Reactive<int> Health => _healthReactive ??= Reactive.Delegate(() => health, v => health = v);
+        [SerializeField] private int attack;
+        private Reactive<int> _attackReactive;
+        public Reactive<int> Attack => _attackReactive ??= Reactive.Delegate(() => attack, v => attack = v);
+        [SerializeField] private float speed;
+        private Reactive<float> _speedReactive;
+        public Reactive<float> Speed => _speedReactive ??= Reactive.Delegate(() => speed, v => speed = v);
+
+
         protected Unit(UnitBase unitBase)
         {
-            CostFood = unitBase.costFood;
-            CostPopulation = unitBase.costPopulation;
-            CostTime = unitBase.costTime;
+            costFood = unitBase.costFood;
+            costPopulation = unitBase.costPopulation;
+            costTime = unitBase.costTime;
+
+            health = unitBase.health;
+            attack = unitBase.attack;
+            speed = unitBase.attackSpeed;
         }
     }
 }
