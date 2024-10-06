@@ -31,7 +31,7 @@ namespace Wars.Views
 
             _heartbeat = Heartbeat.Run(async () =>
             {
-                await UniTask.Delay(5000);
+                await UniTask.Delay(1000);
                 var creatureSo = CreatureSos[0];
                 switch (creatureSo)
                 {

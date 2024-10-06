@@ -13,14 +13,14 @@ namespace Scenes.Games
 
         private void Start()
         {
-#if UNITY_EDITOR
+// #if UNITY_EDITOR
             if (MapName == null || RaceName == null)
             {
                 MapName = "Map1";
                 RaceName = "Race1";
                 RunSceneFlow();
             }
-#endif
+// #endif
         }
 
         #endregion
