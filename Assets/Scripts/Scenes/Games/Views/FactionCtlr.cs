@@ -56,9 +56,9 @@ namespace Scenes.Games.Views
         /// <returns></returns>
         public MainBaseView GenerateMainBaseView(SpawnPoint spawnPoint)
         {
+            RaceSo.mainBaseViewPfb.Duplicate(faction, spawnPoint.transform.position, true);
             var instance = Instantiate(RaceSo.mainBaseViewPfb, spawnPoint.transform.position, Quaternion.identity);
-            mainBaseView = instance;
-            spawnPoint.MainBaseView = instance;
+            spawnPoint.MainBaseView = mainBaseView = instance;
             return instance;
         }
 

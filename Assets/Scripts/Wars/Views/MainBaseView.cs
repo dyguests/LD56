@@ -3,18 +3,13 @@ using Cysharp.Threading.Tasks;
 using Koyou.Commons;
 using UnityEngine;
 using Wars.Entities;
+using Random = UnityEngine.Random;
 
 namespace Wars.Views
 {
     public class MainBaseView : BuildingView
     {
         #region MonoBehaviour
-
-        private void Start()
-        {
-            spawnIntents.Add(new SpawnIntent(CreatureSpawns[0]));
-            LoadData().Forget();
-        }
 
         private void OnDisable()
         {
@@ -27,12 +22,18 @@ namespace Wars.Views
 
         private Heartbeat _heartbeat;
 
+        private Faction faction;
+
         private async UniTask LoadData()
         {
+            spawnIntents.Add(new SpawnIntent(CreatureSpawns[0]));
+
             _heartbeat = Heartbeat.Run(async () =>
             {
+                var creatureViewPfb = CreatureSpawns[0];
+
                 var creatureView = Instantiate(
-                    CreatureSpawns[0],
+                    creatureViewPfb,
                     transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized),
                     Quaternion.identity
                 );
@@ -45,5 +46,17 @@ namespace Wars.Views
         {
             _heartbeat.Stop();
         }
+
+        #region MainBaseView
+
+        public void Duplicate(Faction faction, Vector3 position, bool init = false)
+        {
+            var instance = Instantiate(this, position, Quaternion.identity);
+            instance.faction = faction;
+            // todo if not init, then cost food.
+            LoadData().Forget();
+        }
+
+        #endregion
     }
 }
