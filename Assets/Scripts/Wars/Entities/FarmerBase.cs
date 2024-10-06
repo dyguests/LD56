@@ -1,4 +1,6 @@
-﻿namespace Wars.Entities
+﻿using System;
+
+namespace Wars.Entities
 {
-    public class FarmerBase : CreatureBase { }
+    [Serializable] public class FarmerBase : CreatureBase { }
 }

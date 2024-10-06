@@ -52,7 +52,7 @@ namespace Scenes.Games
                 await mapView.InitFaction(factionCtlr);
             }
 
-            cameramanView.BindPlayer(playerCtlr);
+            // cameramanView.BindPlayer(playerCtlr);
         }
 
         public override async UniTask UnloadData()
