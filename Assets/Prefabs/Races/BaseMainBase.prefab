@@ -60,6 +60,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5499747185471542077}
   m_SourcePrefab: {fileID: 100100000, guid: ec180e06fe24ac9469a1d3615f5f24c8, type: 3}
+--- !u!58 &5472688691211433173 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5275240648254772214, guid: ec180e06fe24ac9469a1d3615f5f24c8, type: 3}
+  m_PrefabInstance: {fileID: 200285070787421987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8668962850337864709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8829828228096662310, guid: ec180e06fe24ac9469a1d3615f5f24c8, type: 3}
@@ -77,4 +82,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8366cfdb34426f8f05d41c06806237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cd: {fileID: 5472688691211433173}
   creatureSpawns: []
+  spawnIntents: []
