@@ -56,7 +56,7 @@ namespace Wars.Views
             instance.name = $"{name}{GenerateId()}";
             instance.faction = faction;
             // todo if not init, then cost food.
-            LoadData().Forget();
+            instance.LoadData().Forget();
 
             return instance;
         }

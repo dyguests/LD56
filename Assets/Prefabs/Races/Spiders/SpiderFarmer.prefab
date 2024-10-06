@@ -50,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3052031786206134140, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
       propertyPath: m_Size.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3052031786206134140, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
       propertyPath: m_Size.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3052031786206134140, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
       propertyPath: m_Sprite
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8062758860537867237, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
       propertyPath: m_Radius
-      value: 0.08
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -93,6 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642b8734cb7a411d912dada8c1ea8e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    costFood: 5
+    costTime: 5
   cd: {fileID: 7618270317098972808}
   farmer:
     costFood: 25

@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcaa2415a70e4e6eb31151f1f1952602, type: 3}
+  m_Name: SpiderFarmerSo
+  m_EditorClassIdentifier: 
+  prefab: {fileID: -8207193321769897458, guid: bacf8a60bf7a9174e9d0a243a108b98e, type: 3}
