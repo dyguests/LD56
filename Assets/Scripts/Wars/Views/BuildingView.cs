@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Wars.Entities;
+using Wars.ScriptableObjects;
 
 namespace Wars.Views
 {
@@ -7,8 +8,7 @@ namespace Wars.Views
         where TData : Building
     {
         [Space] [SerializeField]
-        private Creature[] creatureSpawns;
-
-        public Creature[] CreatureSpawns => creatureSpawns;
+        private CreatureSo[] creatureSos;
+        public CreatureSo[] CreatureSos => creatureSos;
     }
 }

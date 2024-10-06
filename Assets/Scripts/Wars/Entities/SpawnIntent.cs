@@ -1,10 +1,11 @@
 ﻿using System;
+using Wars.ScriptableObjects;
 
 namespace Wars.Entities
 {
     [Serializable]
     public class SpawnIntent : Intent
     {
-        public SpawnIntent(Creature creature) { }
+        public SpawnIntent(CreatureSo creatureSo) { }
     }
 }

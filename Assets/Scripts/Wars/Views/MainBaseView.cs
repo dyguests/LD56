@@ -3,7 +3,6 @@ using Cysharp.Threading.Tasks;
 using Koyou.Commons;
 using UnityEngine;
 using Wars.Entities;
-using Random = UnityEngine.Random;
 
 namespace Wars.Views
 {
@@ -26,11 +25,11 @@ namespace Wars.Views
 
         private async UniTask LoadData()
         {
-            spawnIntents.Add(new SpawnIntent(CreatureSpawns[0]));
+            spawnIntents.Add(new SpawnIntent(CreatureSos[0]));
 
             _heartbeat = Heartbeat.Run(async () =>
             {
-                var creatureViewPfb = CreatureSpawns[0];
+                var creatureSo = CreatureSos[0];
 
                 // var creatureView = Instantiate(
                 //     creatureViewPfb,

@@ -34,12 +34,12 @@ namespace Scenes.Games.Views
             {
                 case FactionBase.RaceType.Frog:
                 {
-                    raceSo = await Resources.LoadAsync<RaceSo>("ScriptableObjects/FrogRaceSo").ToUniTask<RaceSo>();
+                    raceSo = await Resources.LoadAsync<RaceSo>("ScriptableObjects/Races/Frogs/FrogRaceSo").ToUniTask<RaceSo>();
                     break;
                 }
                 case FactionBase.RaceType.Spider:
                 {
-                    raceSo = await Resources.LoadAsync<RaceSo>("ScriptableObjects/SpiderRaceSo").ToUniTask<RaceSo>();
+                    raceSo = await Resources.LoadAsync<RaceSo>("ScriptableObjects/Races/Spiders/SpiderRaceSo").ToUniTask<RaceSo>();
                     break;
                 }
                 default:
@@ -56,8 +56,8 @@ namespace Scenes.Games.Views
         /// <returns></returns>
         public MainBaseView GenerateMainBaseView(SpawnPoint spawnPoint)
         {
-            RaceSo.mainBaseViewPfb.Duplicate(faction, spawnPoint.transform.position, true);
-            var instance = Instantiate(RaceSo.mainBaseViewPfb, spawnPoint.transform.position, Quaternion.identity);
+            RaceSo.prefab.Duplicate(faction, spawnPoint.transform.position, true);
+            var instance = Instantiate(RaceSo.prefab, spawnPoint.transform.position, Quaternion.identity);
             spawnPoint.MainBaseView = mainBaseView = instance;
             return instance;
         }
