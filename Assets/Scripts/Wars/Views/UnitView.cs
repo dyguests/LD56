@@ -9,7 +9,8 @@ namespace Wars.Views
     {
         #region UnitView
 
-        [SerializeField] protected CircleCollider2D cd;
+        [Space] [SerializeField]
+        protected CircleCollider2D cd;
 
         // public Unit Unit => Data;
 
