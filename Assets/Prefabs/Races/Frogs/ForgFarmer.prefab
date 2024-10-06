@@ -110,3 +110,15 @@ MonoBehaviour:
     attack: 0
     speed: 0
   cd: {fileID: 1564194994039398935}
+  statusBarView: {fileID: 7296303080229207015}
+--- !u!114 &7296303080229207015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2238328073947836949, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+  m_PrefabInstance: {fileID: 8813983692857248242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74de3459ea147dba0c15113c2dc7b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

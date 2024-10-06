@@ -65,6 +65,10 @@ PrefabInstance:
       value: 0.8420857
       objectReference: {fileID: 0}
     - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: statusBarView
+      value: 
+      objectReference: {fileID: 7734822838972366016}
+    - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: creatureSos.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -80,6 +84,10 @@ PrefabInstance:
       propertyPath: creatureSpawns.Array.data[0]
       value: 
       objectReference: {fileID: -8207193321769897458, guid: bacf8a60bf7a9174e9d0a243a108b98e, type: 3}
+    - target: {fileID: 8576071329919127564, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: m_Mass
+      value: 0.7853982
+      objectReference: {fileID: 0}
     - target: {fileID: 8668962850337864709, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Name
       value: SpiderMainBase
@@ -89,3 +97,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+--- !u!114 &7734822838972366016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4253204199165898021, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+  m_PrefabInstance: {fileID: 5787678349731893733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74de3459ea147dba0c15113c2dc7b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

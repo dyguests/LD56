@@ -84,6 +84,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -8207193321769897458}
   m_SourcePrefab: {fileID: 100100000, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+--- !u!114 &1823121723107176312 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2238328073947836949, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+  m_PrefabInstance: {fileID: 458562364215139693}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74de3459ea147dba0c15113c2dc7b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6486655620514610776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6654102401751474997, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
@@ -109,6 +120,7 @@ MonoBehaviour:
     attack: 0
     speed: 0
   cd: {fileID: 7618270317098972808}
+  statusBarView: {fileID: 1823121723107176312}
 --- !u!58 &7618270317098972808 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 8062758860537867237, guid: b97c90667fae256469fc7175b89bbd02, type: 3}

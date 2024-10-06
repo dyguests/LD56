@@ -1,4 +1,5 @@
 ﻿using System;
+using Koyou.Commons.Entities;
 using Koyou.Reactives;
 using UnityEngine;
 
@@ -34,9 +35,9 @@ namespace Wars.Entities
             set => costTime = value;
         }
 
-        [SerializeField] private int health;
-        private Reactive<int> _healthReactive;
-        public Reactive<int> Health => _healthReactive ??= Reactive.Delegate(() => health, v => health = v);
+        [SerializeField] private LimitInt health;
+        private Reactive<LimitInt> _healthReactive;
+        public Reactive<LimitInt> Health => _healthReactive ??= Reactive.Delegate(() => health, v => health = v);
         [SerializeField] private int attack;
         private Reactive<int> _attackReactive;
         public Reactive<int> Attack => _attackReactive ??= Reactive.Delegate(() => attack, v => attack = v);
