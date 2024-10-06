@@ -13,7 +13,7 @@ namespace Wars.Entities
     [Serializable]
     public class Faction
     {
-        [SerializeField] private LimitInt food = new(100, 9999);
+        [SerializeField] private LimitInt food = new(9999, 9999);
         private Reactive<LimitInt> _foodReactive;
         public Reactive<LimitInt> Food => _foodReactive ??= Reactive.Delegate(() => food, v => food = v);
 

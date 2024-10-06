@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForgFarmer
       objectReference: {fileID: 0}
+    - target: {fileID: 6654102401751474997, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+      propertyPath: m_TagString
+      value: Farmer
+      objectReference: {fileID: 0}
     - target: {fileID: 8062758860537867237, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
       propertyPath: m_Radius
       value: 0.1
@@ -113,12 +117,24 @@ MonoBehaviour:
     attackSpeed: 0
   rd: {fileID: 2973384276724156110}
   cd: {fileID: 1564194994039398935}
+  visionView: {fileID: 6387949336764054896}
   statusBarView: {fileID: 7296303080229207015}
 --- !u!50 &2973384276724156110 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5985875745467502396, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
   m_PrefabInstance: {fileID: 8813983692857248242}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6387949336764054896 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2519484079533257858, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+  m_PrefabInstance: {fileID: 8813983692857248242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6d8f6020824563927ca8c23d9ecf95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7296303080229207015 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2238328073947836949, guid: b97c90667fae256469fc7175b89bbd02, type: 3}

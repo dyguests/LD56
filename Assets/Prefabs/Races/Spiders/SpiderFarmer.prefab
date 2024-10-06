@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpiderFarmer
       objectReference: {fileID: 0}
+    - target: {fileID: 6654102401751474997, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+      propertyPath: m_TagString
+      value: Farmer
+      objectReference: {fileID: 0}
     - target: {fileID: 8062758860537867237, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
       propertyPath: m_Radius
       value: 0.1
@@ -93,6 +97,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a74de3459ea147dba0c15113c2dc7b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2641965232158468591 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2519484079533257858, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+  m_PrefabInstance: {fileID: 458562364215139693}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6d8f6020824563927ca8c23d9ecf95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &6147200515951268433 stripped
@@ -128,6 +143,7 @@ MonoBehaviour:
     attackSpeed: 0
   rd: {fileID: 6147200515951268433}
   cd: {fileID: 7618270317098972808}
+  visionView: {fileID: 2641965232158468591}
   statusBarView: {fileID: 1823121723107176312}
 --- !u!58 &7618270317098972808 stripped
 CircleCollider2D:

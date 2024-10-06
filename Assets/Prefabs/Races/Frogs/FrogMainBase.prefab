@@ -65,6 +65,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2834353667140796905}
     - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: visionView
+      value: 
+      objectReference: {fileID: 6246702182643776087}
+    - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: statusBarView
       value: 
       objectReference: {fileID: 7734822838972366016}
@@ -100,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrogMainBase
       objectReference: {fileID: 0}
+    - target: {fileID: 8668962850337864709, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: m_TagString
+      value: Mainbase
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110,6 +118,17 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 8576071329919127564, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
   m_PrefabInstance: {fileID: 5787678349731893733}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6246702182643776087 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 495756884639132594, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+  m_PrefabInstance: {fileID: 5787678349731893733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6d8f6020824563927ca8c23d9ecf95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7734822838972366016 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4253204199165898021, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}

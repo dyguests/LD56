@@ -60,6 +60,7 @@ namespace Scenes.Games.Views
             var instance = RaceSo.prefab.Duplicate(faction, spawnPoint.transform.position, true);
             spawnPoint.MainbaseView = mainbaseView = instance;
 
+            instance.FactionCtlr = this;
             instance.Opponent = Opponent;
 
             return instance;

@@ -48,6 +48,7 @@ namespace Wars.Views
                         var farmer = Farmer.CreateFrom(farmerBase);
 
                         var farmerView = farmerSo.prefab.Duplicate(transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized));
+                        farmerView.FactionCtlr = FactionCtlr;
                         farmerView.Opponent = Opponent;
                         farmerView.LoadData(farmer).Forget();
                         break;
@@ -63,6 +64,7 @@ namespace Wars.Views
 
         #region MainBaseView
 
+        public FactionCtlr FactionCtlr { get; set; }
         public FactionCtlr Opponent { get; set; }
 
         public MainbaseView Duplicate(Faction faction, Vector3 position, bool init = false)
