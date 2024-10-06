@@ -29,7 +29,12 @@ namespace Wars.Views
 
         private async UniTask LoadData()
         {
-            _heartbeat = Heartbeat.Run(async () => { await UniTask.Delay(1000); });
+            _heartbeat = Heartbeat.Run(async () =>
+            {
+                var creatureView = Instantiate(CreatureSpawns[0], transform.position, Quaternion.identity);
+                // creatureView.name= "Creature";
+                await UniTask.Delay(5000);
+            });
         }
 
         private async UniTask UnloadData()
