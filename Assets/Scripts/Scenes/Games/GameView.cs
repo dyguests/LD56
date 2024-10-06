@@ -56,6 +56,8 @@ namespace Scenes.Games
 
         public override async UniTask UnloadData()
         {
+            uiView.UnbindPlayer();
+
             await base.UnloadData();
         }
 
