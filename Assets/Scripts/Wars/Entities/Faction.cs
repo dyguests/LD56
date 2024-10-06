@@ -1,5 +1,6 @@
 ﻿using System;
 using Koyou.Commons.Entities;
+using Koyou.Reactives;
 using UnityEngine;
 
 namespace Wars.Entities
@@ -14,11 +15,7 @@ namespace Wars.Entities
     {
         [SerializeField] private LimitInt food = new(100, 9999);
 
-        public LimitInt Food
-        {
-            get => food;
-            set => food = value;
-        }
+        public Reactive<LimitInt> Food=> food;
 
         [SerializeField] private LimitInt population = new(0, 999);
 
