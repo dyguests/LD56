@@ -5,6 +5,7 @@ using Koyou.Frameworks;
 using Scenes.Games.Entities;
 using Scenes.Games.Views;
 using UnityEngine;
+using Wars.Entities;
 
 namespace Scenes.Games
 {

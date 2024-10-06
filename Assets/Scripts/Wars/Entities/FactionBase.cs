@@ -1,4 +1,4 @@
-﻿namespace Scenes.Games.Entities
+﻿namespace Wars.Entities
 {
     /// <summary>
     /// 势力基础设置，用于初始化势力

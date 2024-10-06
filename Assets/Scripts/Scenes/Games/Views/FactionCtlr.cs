@@ -20,8 +20,8 @@ namespace Scenes.Games.Views
         public RaceSo RaceSo => raceSo;
 
         [Header("主基地")] [SerializeField]
-        private MainBaseView mainBaseView;
-        public MainBaseView MainBaseView => mainBaseView;
+        private MainbaseView mainbaseView;
+        public MainbaseView MainbaseView => mainbaseView;
 
         protected virtual async UniTask LoadData(int factionIndex, FactionBase factionBase, Transform parent)
         {
@@ -54,10 +54,10 @@ namespace Scenes.Games.Views
         /// </summary>
         /// <param name="spawnPoint"></param>
         /// <returns></returns>
-        public MainBaseView GenerateMainBaseView(SpawnPoint spawnPoint)
+        public MainbaseView GenerateMainBaseView(SpawnPoint spawnPoint)
         {
             var instance = RaceSo.prefab.Duplicate(faction, spawnPoint.transform.position, true);
-            spawnPoint.MainBaseView = mainBaseView = instance;
+            spawnPoint.MainbaseView = mainbaseView = instance;
             return instance;
         }
 

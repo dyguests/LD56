@@ -7,7 +7,7 @@ using Wars.ScriptableObjects;
 
 namespace Wars.Views
 {
-    public class MainBaseView : BuildingView<MainBase>
+    public class MainbaseView : BuildingView<Mainbase>
     {
         #region MonoBehaviour
 
@@ -35,7 +35,18 @@ namespace Wars.Views
                 {
                     case FarmerSo farmerSo:
                     {
+                        var farmerBase = farmerSo.farmerBase;
+
+                        if (farmerBase.costFood > faction.Food.Value.current) return;
+                        if (farmerBase.costPopulation > faction.Population.Value.Remaining) return;
+
+                        faction.Food.Value -= farmerBase.costFood;
+                        faction.Population.Value += farmerBase.costPopulation;
+
+                        var farmer = Farmer.CreateFrom(farmerBase);
+
                         var farmerView = farmerSo.prefab.Duplicate(transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized));
+                        farmerView.LoadData(farmer).Forget();
                         break;
                     }
                 }
@@ -50,7 +61,7 @@ namespace Wars.Views
 
         #region MainBaseView
 
-        public MainBaseView Duplicate(Faction faction, Vector3 position, bool init = false)
+        public MainbaseView Duplicate(Faction faction, Vector3 position, bool init = false)
         {
             var instance = Instantiate(this, position, Quaternion.identity);
             instance.name = $"{name}{GenerateId()}";

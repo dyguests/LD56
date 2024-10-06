@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Koyou.Frameworks;
 using Scenes.Games.Entities;
 using UnityEngine;
+using Wars.Entities;
 
 namespace Scenes.Games
 {

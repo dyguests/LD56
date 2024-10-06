@@ -2,6 +2,7 @@
 using Koyou.Commons;
 using Scenes.Games.Entities;
 using UnityEngine;
+using Wars.Entities;
 
 namespace Scenes.Games.Views
 {

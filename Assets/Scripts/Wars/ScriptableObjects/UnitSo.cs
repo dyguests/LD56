@@ -2,8 +2,5 @@
 
 namespace Wars.ScriptableObjects
 {
-    public abstract class UnitSo : ScriptableObject
-    {
-        
-    }
+    public abstract class UnitSo : ScriptableObject { }
 }

@@ -5,12 +5,12 @@ namespace Scenes.Games.Views
 {
     public class SpawnPoint : MonoBehaviour
     {
-        [SerializeField] private MainBaseView mainBaseView;
+        [SerializeField] private MainbaseView mainbaseView;
 
-        public MainBaseView MainBaseView
+        public MainbaseView MainbaseView
         {
-            get => mainBaseView;
-            set => mainBaseView = value;
+            get => mainbaseView;
+            set => mainbaseView = value;
         }
     }
 }

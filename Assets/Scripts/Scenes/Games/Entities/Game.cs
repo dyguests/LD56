@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Wars.Entities;
 
 namespace Scenes.Games.Entities
 {

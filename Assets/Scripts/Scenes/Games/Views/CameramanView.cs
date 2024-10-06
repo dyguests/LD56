@@ -14,7 +14,7 @@ namespace Scenes.Games.Views
         {
             this.playerCtlr = playerCtlr;
 
-            var mainBasePosition = playerCtlr.MainBaseView.transform.position;
+            var mainBasePosition = playerCtlr.MainbaseView.transform.position;
             cvCamera.transform.position = new Vector3(mainBasePosition.x, mainBasePosition.y, cvCamera.transform.position.z);
         }
     }
