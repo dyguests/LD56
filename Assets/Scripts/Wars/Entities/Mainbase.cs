@@ -2,6 +2,6 @@
 {
     public class Mainbase : Building
     {
-        public Mainbase(MainbaseBase unitBase) : base(unitBase) { }
+        public Mainbase(MainbaseBase mainbaseBase) : base(mainbaseBase) { }
     }
 }
