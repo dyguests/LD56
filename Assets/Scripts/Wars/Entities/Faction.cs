@@ -14,9 +14,11 @@ namespace Wars.Entities
     public class Faction
     {
         [SerializeField] private LimitInt food = new(100, 9999);
-        public Reactive<LimitInt> Food => Reactive.Delegate(() => food, v => food = v);
+        private Reactive<LimitInt> _foodReactive;
+        public Reactive<LimitInt> Food => _foodReactive ??= Reactive.Delegate(() => food, v => food = v);
 
         [SerializeField] private LimitInt population = new(0, 999);
-        public Reactive<LimitInt> Population => Reactive.Delegate(() => population, v => population = v);
+        private Reactive<LimitInt> _populationReactive;
+        public Reactive<LimitInt> Population => _populationReactive ??= Reactive.Delegate(() => population, v => population = v);
     }
 }
