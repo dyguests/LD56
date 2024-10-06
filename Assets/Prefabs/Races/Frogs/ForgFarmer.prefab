@@ -106,11 +106,19 @@ MonoBehaviour:
     costFood: 25
     costPopulation: 0
     costTime: 5
-    health: 0
+    health:
+      current: 0
+      max: 0
     attack: 0
-    speed: 0
+    attackSpeed: 0
+  rd: {fileID: 2973384276724156110}
   cd: {fileID: 1564194994039398935}
   statusBarView: {fileID: 7296303080229207015}
+--- !u!50 &2973384276724156110 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5985875745467502396, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+  m_PrefabInstance: {fileID: 8813983692857248242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7296303080229207015 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2238328073947836949, guid: b97c90667fae256469fc7175b89bbd02, type: 3}

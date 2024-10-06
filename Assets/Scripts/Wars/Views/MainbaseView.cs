@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Koyou.Commons;
+using Scenes.Games.Views;
 using UnityEngine;
 using Wars.Entities;
 using Wars.ScriptableObjects;
@@ -30,6 +31,7 @@ namespace Wars.Views
 
             _heartbeat = Heartbeat.Run(async () =>
             {
+                await UniTask.Delay(5000);
                 var creatureSo = CreatureSos[0];
                 switch (creatureSo)
                 {
@@ -46,11 +48,11 @@ namespace Wars.Views
                         var farmer = Farmer.CreateFrom(farmerBase);
 
                         var farmerView = farmerSo.prefab.Duplicate(transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized));
+                        farmerView.Opponent = Opponent;
                         farmerView.LoadData(farmer).Forget();
                         break;
                     }
                 }
-                await UniTask.Delay(5000);
             });
         }
 
@@ -60,6 +62,8 @@ namespace Wars.Views
         }
 
         #region MainBaseView
+
+        public FactionCtlr Opponent { get; set; }
 
         public MainbaseView Duplicate(Faction faction, Vector3 position, bool init = false)
         {

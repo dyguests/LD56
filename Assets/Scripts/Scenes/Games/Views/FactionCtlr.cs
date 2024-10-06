@@ -1,7 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using Koyou.Commons;
-using Scenes.Games.Entities;
 using UnityEngine;
 using Wars.Entities;
 using Wars.ScriptableObjects;
@@ -22,6 +21,8 @@ namespace Scenes.Games.Views
         [Header("主基地")] [SerializeField]
         private MainbaseView mainbaseView;
         public MainbaseView MainbaseView => mainbaseView;
+
+        public FactionCtlr Opponent { get; set; }
 
         protected virtual async UniTask LoadData(int factionIndex, FactionBase factionBase, Transform parent)
         {
@@ -58,6 +59,9 @@ namespace Scenes.Games.Views
         {
             var instance = RaceSo.prefab.Duplicate(faction, spawnPoint.transform.position, true);
             spawnPoint.MainbaseView = mainbaseView = instance;
+
+            instance.Opponent = Opponent;
+
             return instance;
         }
 

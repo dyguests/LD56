@@ -2,9 +2,6 @@
 
 namespace Wars.Views
 {
-    public interface ICreatureView { }
-
-    public abstract class CreatureView<TData> : UnitView<TData>,
-        ICreatureView
+    public abstract class CreatureView<TData> : UnitView<TData>
         where TData : Creature { }
 }

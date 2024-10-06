@@ -61,6 +61,10 @@ PrefabInstance:
       value: 0.8324365
       objectReference: {fileID: 0}
     - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: rd
+      value: 
+      objectReference: {fileID: 2834353667140796905}
+    - target: {fileID: 5499747185471542077, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: statusBarView
       value: 
       objectReference: {fileID: 7734822838972366016}
@@ -88,6 +92,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.7853982
       objectReference: {fileID: 0}
+    - target: {fileID: 8576071329919127564, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8668962850337864709, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
       propertyPath: m_Name
       value: FrogMainBase
@@ -97,6 +105,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+--- !u!50 &2834353667140796905 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8576071329919127564, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}
+  m_PrefabInstance: {fileID: 5787678349731893733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7734822838972366016 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4253204199165898021, guid: 4ad89d265db725b409a52d38c4f72ea7, type: 3}

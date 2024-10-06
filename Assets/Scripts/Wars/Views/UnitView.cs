@@ -31,7 +31,8 @@ namespace Wars.Views
         protected static long GenerateId() => sID++;
 
         [Space] [SerializeField]
-        protected CircleCollider2D cd;
+        protected Rigidbody2D rd;
+        [SerializeField] protected CircleCollider2D cd;
 
         [Space] [SerializeField]
         protected StatusBarView statusBarView;

@@ -47,6 +47,13 @@ namespace Scenes.Games
                 }
             }
 
+            // 暂时只管两个势力
+            if (factionCtlrs.Count == 2)
+            {
+                factionCtlrs[0].Opponent = factionCtlrs[1];
+                factionCtlrs[1].Opponent = factionCtlrs[0];
+            }
+
             foreach (var factionCtlr in factionCtlrs)
             {
                 await mapView.InitFaction(factionCtlr);

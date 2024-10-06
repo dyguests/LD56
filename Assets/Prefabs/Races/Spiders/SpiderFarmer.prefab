@@ -95,6 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74de3459ea147dba0c15113c2dc7b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &6147200515951268433 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5985875745467502396, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
+  m_PrefabInstance: {fileID: 458562364215139693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6486655620514610776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6654102401751474997, guid: b97c90667fae256469fc7175b89bbd02, type: 3}
@@ -116,9 +121,12 @@ MonoBehaviour:
     costFood: 5
     costPopulation: 0
     costTime: 5
-    health: 0
+    health:
+      current: 0
+      max: 0
     attack: 0
-    speed: 0
+    attackSpeed: 0
+  rd: {fileID: 6147200515951268433}
   cd: {fileID: 7618270317098972808}
   statusBarView: {fileID: 1823121723107176312}
 --- !u!58 &7618270317098972808 stripped

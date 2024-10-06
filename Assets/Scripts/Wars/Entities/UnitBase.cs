@@ -12,5 +12,7 @@ namespace Wars.Entities
         public int health = 50;
         public int attack = 5;
         public float attackSpeed = 1;
+
+        public float speed = 5;
     }
 }

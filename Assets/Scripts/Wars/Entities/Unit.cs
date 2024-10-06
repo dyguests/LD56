@@ -41,9 +41,12 @@ namespace Wars.Entities
         [SerializeField] private int attack;
         private Reactive<int> _attackReactive;
         public Reactive<int> Attack => _attackReactive ??= Reactive.Delegate(() => attack, v => attack = v);
-        [SerializeField] private float speed;
+        [SerializeField] private float attackSpeed;
+        private Reactive<float> _attackSpeedReactive;
+        public Reactive<float> AttackSpeed => _attackSpeedReactive ??= Reactive.Delegate(() => attackSpeed, v => attackSpeed = v);
+        private float _speed;
         private Reactive<float> _speedReactive;
-        public Reactive<float> Speed => _speedReactive ??= Reactive.Delegate(() => speed, v => speed = v);
+        public Reactive<float> Speed => _speedReactive ??= Reactive.Delegate(() => _speed, v => _speed = v);
 
 
         protected Unit(UnitBase unitBase)
@@ -54,7 +57,8 @@ namespace Wars.Entities
 
             health = unitBase.health;
             attack = unitBase.attack;
-            speed = unitBase.attackSpeed;
+            attackSpeed = unitBase.attackSpeed;
+            _speed = unitBase.speed;
         }
     }
 }
