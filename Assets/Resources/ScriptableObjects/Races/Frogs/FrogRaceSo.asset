@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3ac25e5a5b4bf3a6f5d0d5c056b075, type: 3}
   m_Name: FrogRaceSo
   m_EditorClassIdentifier: 
+  mainbaseSo: {fileID: 11400000, guid: 6c52b8d90343f184f876e228632989a2, type: 2}
   prefab: {fileID: 2018439630315143896, guid: a4fb62cb791f51748aa82b52f168137e, type: 3}

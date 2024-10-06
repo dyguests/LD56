@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a509412f35924eb6829f26c08e39d90d, type: 3}
-  m_Name: ForgMainbaseSo
+  m_Name: FrogMainbaseSo
   m_EditorClassIdentifier: 
   mainbaseBase:
     costFood: 25
