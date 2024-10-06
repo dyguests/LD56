@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Koyou.Commons;
 using UnityEngine;
 using Wars.Entities;
+using Wars.ScriptableObjects;
 
 namespace Wars.Views
 {
@@ -30,13 +31,14 @@ namespace Wars.Views
             _heartbeat = Heartbeat.Run(async () =>
             {
                 var creatureSo = CreatureSos[0];
-
-                // var creatureView = Instantiate(
-                //     creatureViewPfb,
-                //     transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized),
-                //     Quaternion.identity
-                // );
-                // creatureView.name= "Creature";
+                switch (creatureSo)
+                {
+                    case FarmerSo farmerSo:
+                    {
+                        var farmerView = farmerSo.prefab.Duplicate(transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized));
+                        break;
+                    }
+                }
                 await UniTask.Delay(5000);
             });
         }
@@ -48,12 +50,15 @@ namespace Wars.Views
 
         #region MainBaseView
 
-        public void Duplicate(Faction faction, Vector3 position, bool init = false)
+        public MainBaseView Duplicate(Faction faction, Vector3 position, bool init = false)
         {
             var instance = Instantiate(this, position, Quaternion.identity);
+            instance.name = $"{name}{GenerateId()}";
             instance.faction = faction;
             // todo if not init, then cost food.
             LoadData().Forget();
+
+            return instance;
         }
 
         #endregion

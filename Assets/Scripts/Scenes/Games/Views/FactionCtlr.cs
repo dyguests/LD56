@@ -56,8 +56,7 @@ namespace Scenes.Games.Views
         /// <returns></returns>
         public MainBaseView GenerateMainBaseView(SpawnPoint spawnPoint)
         {
-            RaceSo.prefab.Duplicate(faction, spawnPoint.transform.position, true);
-            var instance = Instantiate(RaceSo.prefab, spawnPoint.transform.position, Quaternion.identity);
+            var instance = RaceSo.prefab.Duplicate(faction, spawnPoint.transform.position, true);
             spawnPoint.MainBaseView = mainBaseView = instance;
             return instance;
         }

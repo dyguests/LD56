@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcaa2415a70e4e6eb31151f1f1952602, type: 3}
   m_Name: FrogFarmerSo
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5011982991541535968, guid: 44d89c8de10aa674f8ad0d932dba1cb7, type: 3}

@@ -1,4 +1,4 @@
 ﻿namespace Wars.ScriptableObjects
 {
-    public abstract class CreatureSo :UnitSo{ }
- }
+    public abstract class CreatureSo : UnitSo { }
+}

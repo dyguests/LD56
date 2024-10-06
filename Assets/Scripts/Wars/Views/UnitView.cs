@@ -9,6 +9,10 @@ namespace Wars.Views
     {
         #region UnitView
 
+        // ReSharper disable once StaticMemberInGenericType
+        private static long sID = 0;
+        protected static long GenerateId() => sID++;
+
         [Space] [SerializeField]
         protected CircleCollider2D cd;
 
