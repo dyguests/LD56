@@ -4,3 +4,6 @@
 [submodule "Assets/Dependencies/Koyou/Frameworks"]
 	path = Assets/Dependencies/Koyou/Frameworks
 	url = git@github.com:Koyou-Game/Unity.Frameworks.git
+[submodule "Assets/Dependencies/Koyou/Reactives"]
+	path = Assets/Dependencies/Koyou/Reactives
+	url = git@github.com:Koyou-Game/Unity.Reactives.git
