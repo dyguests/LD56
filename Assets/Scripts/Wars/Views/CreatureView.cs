@@ -1,4 +1,10 @@
-﻿namespace Wars.Views
+﻿using Wars.Entities;
+
+namespace Wars.Views
 {
-    public abstract class CreatureView : UnitView { }
+    public interface ICreatureView { }
+
+    public abstract class CreatureView<TData> : UnitView<TData>,
+        ICreatureView
+        where TData : Creature { }
 }

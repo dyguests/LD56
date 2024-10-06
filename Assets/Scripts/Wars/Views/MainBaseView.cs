@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace Wars.Views
 {
-    public class MainBaseView : BuildingView
+    public class MainBaseView : BuildingView<MainBase>
     {
         #region MonoBehaviour
 
@@ -32,11 +32,11 @@ namespace Wars.Views
             {
                 var creatureViewPfb = CreatureSpawns[0];
 
-                var creatureView = Instantiate(
-                    creatureViewPfb,
-                    transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized),
-                    Quaternion.identity
-                );
+                // var creatureView = Instantiate(
+                //     creatureViewPfb,
+                //     transform.position + (Vector3)(cd.radius * Random.insideUnitCircle.normalized),
+                //     Quaternion.identity
+                // );
                 // creatureView.name= "Creature";
                 await UniTask.Delay(5000);
             });

@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using Wars.Entities;
 
 namespace Wars.Views
 {
-    public abstract class BuildingView : UnitView
+    public abstract class BuildingView<TData> : UnitView<TData>
+        where TData : Building
     {
-        [Space]
-        [SerializeField]
-        private CreatureView[] creatureSpawns;
+        [Space] [SerializeField]
+        private Creature[] creatureSpawns;
 
-        public CreatureView[] CreatureSpawns => creatureSpawns;
+        public Creature[] CreatureSpawns => creatureSpawns;
     }
 }
